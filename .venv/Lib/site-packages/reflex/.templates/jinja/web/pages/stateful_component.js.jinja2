@@ -1,0 +1,23 @@
+{% import 'web/pages/utils.js.jinja2' as utils %}
+
+export function {{tag_name}} () {
+  {% for hook in component._get_all_hooks_internal() %}
+  {{ hook }}
+  {% endfor %}
+
+  {% for hook, data in component._get_all_hooks().items() if not data.position or data.position == const.hook_position.PRE_TRIGGER %}
+  {{ hook }}
+  {% endfor %}
+
+  {% for hook in memo_trigger_hooks %}
+  {{ hook }}
+  {% endfor %}
+
+  {% for hook, data in component._get_all_hooks().items() if data.position and data.position == const.hook_position.POST_TRIGGER %}
+  {{ hook }}
+  {% endfor %}
+
+  return (
+    {{utils.render(component.render(), indent_width=0)}}
+  )
+}
