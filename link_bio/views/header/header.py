@@ -34,6 +34,10 @@ def header():
                             "youtube",
                             "https://www.youtube.com/@Nico-HANst"
                         ),
+                        link_icon(
+                            "instagram",
+                            "https://www.instagram.com/nico_hanst/"
+                        ),
                     ),
                     row_gap = st.Size.S.value,
                 ),
