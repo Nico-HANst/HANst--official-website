@@ -22,7 +22,7 @@ def links():
             "code-xml",
             "Código de Esta Página",
             "Por si quieres consultar y aprender del código de esta página.",
-            "https://github.com/Nico-HANst/Link-in-BIO"
+            "https://github.com/Nico-HANst/HANst--official-website"
         ),
         align="center",
         width="100%"
